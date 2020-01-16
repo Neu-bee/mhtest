@@ -1,0 +1,1115 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>20200107mahuan</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		
+		<!-- all css here -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" >
+      <!--  <link rel="stylesheet" href="assets/css/bootstrap.min.css">  -->
+        <link rel="stylesheet" href="assets/css/plugin.css">
+        <link rel="stylesheet" href="assets/css/bundle.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        
+        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+          <!-- Add your site or application content here -->
+            
+            <div class="exporso_wrapper">
+                <header>
+                    <div class="header_middle">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="upload/logo3.png" alt="logo"></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="category_search">
+                                        <form action="#">
+                                            <div class="category_search_inner">
+                                                <div class="select">
+                                                    <select name="categroy_search">
+                                                        <option value="1" selected>所有商品</option>
+                                                        <option value="2" >新品速递</option>
+                                                        <option value="3" >即将上架</option>
+                                                        <option value="4" >流行时尚</option>
+                                                        <option value="5" >销量最高</option>
+                                                    </select>
+                                                </div>
+                                                <div class="search" >
+                                                    <input type="text" placeholder="搜索关键词" id="goods_name_txt" name="goods_name_txt" />
+                                                </div>
+                                                <div class="submit">
+                                                    <button type="submit" id='goods_search_btn'><i class="zmdi zmdi-search"></i></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--
+                                	作者：1007409254@qq.com
+                                	时间：2020-01-07
+                                	描述：购物车模块
+                                -->
+                                <div class="col-lg-2 col-md-1">
+                                    <div class="mini_cart_box_wrapper text-right">
+                                        <a href="#">
+                                            <img src="assets/img/icon/cart.png" alt="Mini Cart Icon">
+                                            <span class="cart_count">02</span>
+                                        </a>
+                                        <ul class="mini_cart_box">
+                                            <li class="single_product_cart">
+                                                <div class="cart_title">
+                                                    <h3><a href="product-details.html"> 空空如也，快去买东西吧</a></h3>
+                                                </div>
+                                            </li>
+                                            <li class="cart_space">
+                                                <div class="cart_sub">
+                                                    <h4>合计</h4>
+                                                </div>
+                                                <div class="cart_price">
+                                                    <h4>????</h4>
+                                                </div>
+                                            </li>
+                                            <li class="cart_btn_wrapper">
+                                                <a class="cart_btn" href="#">查看购物车</a>
+                                                <a class="cart_btn " href="#">去结算</a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-12">
+                                    <div class="menu d-none d-lg-block ">
+                                        <nav>
+                                            <ul>                                                  
+                                                <li><a href="index.html">主页</a></li>
+												<li><a href="shop.html">商店</a></li>
+                                                <li><a href="product-details.html">商品信息</a></li>
+                                                <li><a href="#" onclick='show_page_do()'>我的购物车</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <div class="header_right_info">
+                                        <ul>
+                                            <li><a href="#">心愿单<span> <i class="zmdi zmdi-favorite-outline"></i> (0) </span></a></li>
+                                            
+                                            <li><a href="#" id="login" ><span ><i class="zmdi zmdi-account"></i></span><span id='login_info'>登录</span></a></li>							                    
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                
+                                <!--
+                                <div class="col-12 d-lg-none">
+                                <!--    Mobile menu murkup start-->
+                                    
+                                    <div class="mobile-menu-area d-lg-none">
+                                        <div class="mobile-menu clearfix">
+                                            <nav>
+                                                <ul>                                                  
+                                                    <li><a href="index.html">主页</a></li>
+												<li><a href="shop.html">商店 </a></li>
+                                                <li><a href="product-details.html">商品信息</a></li>
+                                                <li><a href="#" onclick='show_page_do()'>我的购物车</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    
+                                 <!--   Mobile menu murkup End-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- 其他页面替换区域 -->
+               <div id="showPart">
+                <!--Breadcrumb section-->
+                <div class="breadcrumb_section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="breadcrumb_inner">
+                                    <ul>
+                                        <li><a href="#">主页</a></li>
+                                        <li><i class="zmdi zmdi-chevron-right"></i></li>
+                                        <li>商店</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Breadcrumb section end-->
+                
+                
+                 <!-- slider-area-start -->
+                <div class="slider_wrapper">
+                    <div class="slider-active owl-carousel">
+                        <!--Single Slide-->
+                        <div class="single__slider bg-opacity" style="background-image:url(assets/img/slide/1.jpg)">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="slider-content slider-text-animation" align=center>
+                                        
+                                            <h1>寒冰射手</h1>
+                                            <h2>90% Off</h2>
+                                            <p>万物，皆系于一箭之上</p>
+                                            <a href="#">立即购买</a>									
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="slider_layer_image">
+                                            <img src="upload/aixi2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>	
+                            </div>
+                        </div>
+                        <!--Single slide end--> 
+                        <!--Single Slide-->
+                        <div class="single__slider bg-opacity" style="background-image:url(assets/img/slide/1.jpg)">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="slider-content slider-text-animation">
+                                            <h1>新手推荐</h1>
+                                            <h2>5% - 20%超低价</h2>
+                                            <p>2020，英雄，为你而战！！ </p>
+                                            <a href="#">立即购买</a>									
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="slider_layer_image">
+                                            <img src="upload/QQhero.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>	
+                            </div>
+                        </div>
+                        <!--Single slide end--> 
+                        <!--Single Slide-->
+                        <div class="single__slider bg-opacity" style="background-image:url(assets/img/slide/1.jpg)">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="slider-content slider-text-animation">
+                                            <h1>疾风剑豪</h1>
+                                            <h2>90% Off</h2>
+                                            <p>且随疾风前行，身后亦需留心 </p>
+                                            <a href="#">立即购买</a>									
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="slider_layer_image">
+                                            <img src="upload/yasuo2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>	
+                            </div>
+                        </div>
+                        <!--Single slide end-->    
+                    </div>
+                </div>
+                <!-- slider-area-end -->
+                
+                
+                
+                <!--shop area start-->
+                <div class="shop_area ptb-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-8 col-12">
+                                <div class="shop_sidebar">
+                                   
+                                    <div class="sidebar_widget mb-50">
+                                        <div class="widget_title">
+                                            <h3>商品列表</h3>
+                                        </div>
+                                        <div class="widget_categories">
+                                           <ul>
+                                                <li><a href="#">战士<span class="caet_count">(6)</span></a></li>
+                                                <li><a href="#">法师<span class="caet_count">(8)</span></a></li>
+                                                <li><a href="#">刺客<span class="caet_count">(7)</span></a></li>
+                                                <li><a href="#">坦克<span class="caet_count">(10)</span></a></li>
+                                                <li><a href="#">射手<span class="caet_count">(5)</span></a></li>
+                                                <li><a href="#">辅助<span class="caet_count">(12)</span></a></li>
+                                                <li><a href="#">其他<span class="caet_count">(15)</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="sidebar_widget mb-50">
+                                        <div class="widget_title">
+                                            <h3>地区</h3>
+                                        </div>
+                                        <div class="widget_brand">
+                                           <ul>
+                                                <li><a href="#">德玛西亚</a></li>
+                                                <li><a href="#">诺克萨斯</a></li>
+                                                <li><a href="#">弗雷尔卓德</a></li>
+                                                <li><a href="#">艾欧尼亚</a></li>
+                                                <li><a href="#">虚空之地</a></li>
+                                                <li><a href="#">暗影岛</a></li>
+                                                <li><a href="#">祖安</a></li>
+                                                <li><a href="#">巨神峰</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                                        
+                                    <div class="sidebar_widget mb-50">
+                                        <div class="widget_title">
+                                            <h3>价格</h3>
+                                        </div>
+                                        <div class="widget_price">
+                                            <div class="sidebar-price">
+                                                <div id="price-range"></div>
+                                                <input type="text" id="price-amount" readonly>
+                                            </div>
+                                        </div>
+                                    </div>      
+                                                         
+                                    
+                                    <div class="sidebar_widget mb-50">
+                                        <div class="widget_title">
+                                            <h3>装备</h3>
+                                        </div>
+                                        <div class="widget_colord">
+                                           <ul>
+                                                <li><a href="#">攻击力</a></li>
+                                                <li><a href="#">法强</a></li>
+                                                <li><a href="#">移速</a></li>
+                                                <li><a href="#">攻速</a></li>
+                                                <li><a href="#">法穿</a></li>
+                                                <li><a href="#">磨抗</a></li>
+                                                <li><a href="#">护甲</a></li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    
+                                    <div class="sidebar_widget">
+                                        <div class="widget_title">
+                                            <h3>标签</h3>
+                                        </div>
+                                        <div class="widget_tags">
+                                           <ul>
+                                                <li><a href="#">剑士</a></li>
+                                                <li><a href="#">贵族</a></li>
+                                                <li><a href="#">狂野</a></li>
+                                                <li><a href="#">光</a></li>
+                                                <li><a href="#">暗</a></li>
+                                                <li><a href="#">土</a></li>
+                                                <li><a href="#">火</a></li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-12 col-12 shop_details">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- Shop Top Bar Start -->
+                                        <div class="shop-top-bar d-flex justify-content-between align-items-center">
+
+                                            <div class="shop_top_left d-flex align-items-center">
+                                            	
+                                            	
+                                                <!-- 浏览方式 -->
+                                                <div class="product-view-mode nav" role="tablist" >
+                                                    <a class="active" href="#grid_view" data-toggle="tab" role="tab" aria-controls="grid_view"><i class="fa fa-th"></i></a>
+                                                    <a href="#list_view" data-toggle="tab" role="tab" aria-controls="list_view"><i class="fa fa-list"></i></a>
+                                                </div>
+
+
+
+                                                <!-- 商品展示 -->
+                                                <div class="product-showing d-flex">
+                                                    <p>展示数量选择</p>
+                                                    <select name="pageSize" id="pageSize" onchange='loadData(1,"")' class="nice-select">
+                                                        <option value="6">6</option>
+                                                        <option value="9">9</option>
+                                                        <option value="12">12</option>
+                                                        <option value="15">15</option>
+                                                        <option value="18">18</option>
+                                                    </select>
+                                                </div>
+
+                                                <!-- 产品筛选 -->
+                                                <div class="product-short d-flex">
+                                                    <p>产品筛选</p>
+                                                    <select name="sortby" class="nice-select">
+                                                        <option value="trending">流行趋势</option>
+                                                        <option value="sales">最火程度</option>
+                                                        <option value="rating">关联度最高</option>
+                                                        <option value="date">最新产品</option>
+                                                        <option value="price-asc">价格：从低到高</option>
+                                                        <option value="price-desc">价格：从高到底</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            <!-- Product Pages -->
+                                            <div class="product-pages">
+                                                <p>第 ??? 页，共 ??? 页</p>
+                                            </div>
+                                        </div><!-- Shop Top Bar End -->
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="tab-content">
+                                        	
+                                        	
+                                        	
+                                        	<!--
+                                            	作者：1007409254@qq.com
+                                            	时间：2020-01-07
+                                            	描述：网格显示
+                                            -->
+                                            <div class="tab-pane active show fade" id="grid_view" role="tabpanel">
+                                            	
+                                            	
+                                            	
+                                                <div class="row" id="goodsShow">
+                                                
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                            <!--
+                                            	作者：1007409254@qq.com
+                                            	时间：2020-01-07
+                                            	描述：列表显示
+                                            -->
+                                            <div class="tab-pane fade" id="list_view" role="tabpanel">
+                                                <div class="row">
+                                                    
+                                                    <div class="col-12 mb-40">
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                                <div class="single_Product_list">
+                                                                    <div class="single__product">
+                                                                        <span class="pro_badge">New</span>
+                                                                        <div class="produc_thumb">
+                                                                            <a href="product-details.html"><img src="assets/img/product/5.png" alt=""></a>
+                                                                        </div>
+                                                                        <div class="product_hover">
+                                                                            <div class="product_action">
+                                                                                <a href="#" title="Add To Cart"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
+                                                                                <a href="#" title="Wishlist"><i class="zmdi zmdi-favorite-outline"></i></a>
+                                                                                <a href="#" title="Compare"><i class="zmdi zmdi-refresh-alt"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <div class="product__desc">
+                                                                    <h3><a href="product-details.html">Soffer Pro x33</a></h3>
+                                                                    <div class="product_rating">
+                                                                        <a href="#"><i class="zmdi zmdi-star"></i></a>
+                                                                        <a href="#"><i class="zmdi zmdi-star"></i></a>
+                                                                        <a href="#"><i class="zmdi zmdi-star"></i></a>
+                                                                        <a href="#"><i class="zmdi zmdi-star"></i></a>
+                                                                        <a href="#"><i class="zmdi zmdi-star-half"></i></a>
+                                                                    </div>
+                                                                    <div class="price_amount">
+                                                                        <span class="current_price">$2999.99</span>
+                                                                    </div>
+                                                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sit cum quaerat accusantium sint fugit perspiciatis fugiat cupiditate quia officiis obcaecati nesciunt molestias culpa, temporibus natus similique. Accusantium, asperiores quia blanditiis nemo repellat ab quod similique animi deserunt! Atque, nobis. </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                   
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <!--
+                                	作者：1007409254@qq.com
+                                	时间：2020-01-07
+                                	描述：分页
+                                -->
+                                <div class="row pagination_box mt-70">
+                                    <div class="col-12">
+                                        <div class="pagination">
+                                            <ul>
+                                                <li><a href="#"><i class="zmdi zmdi-chevron-left"></i> 上一页</a></li>
+                                                <li><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li class="active">4</li>
+                                                <li>..</li>
+                                                <li><a href="#">8</a></li>
+                                                <li><a href="#">9</a></li>
+                                                <li><a href="#">下一页<i class="zmdi zmdi-chevron-right"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div> 
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+                </div>
+                <!--shop area end-->
+                
+      </div>          
+<!-- 替换区域结束 -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="newsletter_section ptb-80">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-md-12">
+                                <div class="newsletter_text">
+                                    <h2>订阅我们</h2>
+                                    <p>订阅我们的邮件，每天第一时间通知您所有更新。</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-12">
+                                <div class="newsletter_form">
+                                    <form action="#">
+                                        <input type="email" placeholder="请输入您的邮箱">
+                                        <button type="submit">订阅</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Newsletter section end -->
+                
+                
+                
+               <!--Footer start-->
+                <footer class="footer_area">
+                    <div class="footer_top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="our_help_services ptb-80">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-6 col-12">
+                                                <div class="help_service d-flex">
+                                                    <div class="h_ser_icon">
+                                                        <i class="zmdi zmdi-boat"></i>
+                                                    </div>
+                                                    <div class="h_ser_text">
+                                                        <h3>Free Shipping</h3>
+                                                        <p>Free Shipping on Bangladesh</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-12">
+                                                <div class="help_service d-flex justify-content-center">
+                                                    <div class="h_ser_icon">
+                                                        <i class="zmdi zmdi-shield-security"></i>
+                                                    </div>
+                                                    <div class="h_ser_text">
+                                                        <h3>Money Guarentee</h3>
+                                                        <p>Free Shipping on Bangladesh</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-12">
+                                                <div class="help_service d-flex justify-content-end">
+                                                    <div class="h_ser_icon">
+                                                        <i class="zmdi zmdi-phone-setting"></i>
+                                                    </div>
+                                                    <div class="h_ser_text">
+                                                        <h3>Online Support</h3>
+                                                        <p>Free Shipping on Bangladesh</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_bottom ptb-80">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="single_footer widget_description">
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                                        <div class="addresses_inner">
+                                            <div class="single_address">
+                                                <p>
+                                                    <span> Address: </span> <span>13/M Matador road, South <br> Road USA- 2155</span>
+                                                </p> 
+	   
+                                                <p>
+                                                    <span> Phone: </span> <span>+12  2223 2223 22 <br>  +125 5455 5555 55</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="social__icon">
+                                            <ul>
+                                                <li>
+                                                    <a class="facebook" href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a class="google-plus" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="twitter" href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a class="linkedin" href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="single_footer footer_widget_menu">
+                                        <div class="widget_title">
+                                            <h3>Services</h3>
+                                        </div>
+                                        <ul>
+                                            <li><a href="#">free shipping</a></li>
+                                            <li><a href="#">Product Delivary</a></li>
+                                            <li><a href="#">Product Tracking</a></li>
+                                            <li><a href="#">Online Pyament</a></li>
+                                            <li><a href="#">Discount</a></li>
+                                            <li><a href="#">Online Vendor</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="single_footer footer_widget_menu">
+                                        <div class="widget_title">
+                                            <h3>Support</h3>
+                                        </div>
+                                        <ul>
+                                            <li><a href="#">QUeality</a></li>
+                                            <li><a href="#">Order Details</a></li>
+                                            <li><a href="#">Order Slips</a></li>
+                                            <li><a href="#">Shipping</a></li>
+                                            <li><a href="#">Store Deal</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="single_footer footer_widget_menu">
+                                        <div class="widget_title">
+                                            <h3>账户</h3>
+                                        </div>
+                                        <ul>
+                                            <li><a href="#">我的帐户</a></li>
+                                            <li><a href="#">订单记录</a></li>
+                                            <li><a href="#">心愿单</a></li>
+                                            <li><a href="#">购物车信息</a></li>
+                                            <li><a href="#">比价信息</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="copyright_inner text-center">
+                                        <p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!--Footer end-->
+               
+               
+                
+            </div>
+            
+            
+           
+           
+           
+           
+           
+  <div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title" id='login-title'>登录</h4>
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body " align=center>
+        				<form class="form-horizontal" action="user.do" method="post" id="form-info" name="login_form"> 
+							<div class="form-group" >
+								<label class="col-md-4 col-sm-4 control-label" id='cusname'>用户名：</label>
+								<div class="col-md-6 ">
+									<input type="text" class="form-control"  required="required" name="userName" value="">
+								
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 col-sm-4 control-label">密码：</label>
+								<div class="col-md-6 ">
+									<input type="password" class="form-control"  required="required" name="userPwd">
+								
+								</div>
+							</div>
+							<div class="form-group">
+							
+								<label class="col-md-4 col-sm-4 control-label">验证码：</label>
+								<div class="col-md-6">
+								 <img alt="" src="checkCode.do" onclick="this.src='checkCode.do?t='+Math.random()" height="100px" width="200px">
+								 </div>
+								<div class="col-md-6">
+									<input type="text" class="form-control"  required="required" name="checkCode">
+								</div>
+								<br />
+								
+							</div>
+						</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default zmdi zmdi-close-circle" data-dismiss="modal">关闭</button>
+        <button type="submit" class="btn btn-primary zmdi zmdi-account-add" id="login_btn" form="login_form">登录</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+           
+        <!-- all js here -->
+        
+     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+     <!--   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <!--   <script src="assets/js/bootstrap.min.js"></script>   -->
+   <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/esm/popper-utils.js"></script> -->
+    
+        <script src="assets/js/popper.js"></script>   
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+       
+       
+       
+       <script type="text/javascript">
+        
+        $("#login").click(function(){
+			$('#myModal').modal();
+			return false;
+		});
+      
+		$("#login_btn").click(function(){
+			alert("test");
+			$.ajax({
+				cache : false,
+				url : "frontLogin.do",
+				data :$("#form-info").serialize(),
+				method : "post",
+				aysnc : true,
+				//dataType : "json",
+				error : function(XMLHttpRequest, textStatus, errorThrown){
+		            debugger
+		            // 状态码
+		            console.log(XMLHttpRequest.status);
+		            // 状态
+		            console.log(XMLHttpRequest.readyState);
+		            // 错误信息
+		            console.log(textStatus);
+				},
+				success : function(data) {
+					if(data=="true"){
+			        	$("#login_info").html($(":text[name=userName]").val()+"已经登录");
+			        	//关闭模态框
+			        	$('#myModal').modal('hide');
+			        	//登陆时刷新迷你购物车
+			        	mini_cart_show();
+			        }
+			        else{
+			        	alert("登录失败");
+			        }
+				}
+				})
+		});
+        
+		
+		
+        //调用加载数据的函数
+		loadData(1,"");
+			/*加载页面中显示所有的数据*/
+	
+	
+	
+	//查询
+	//调用单击查询按钮的函数
+			clickGoodsSearch();
+			/*给查询按钮加单击事件*/
+			function clickGoodsSearch(){
+				$("#goods_search_btn").click(function(){
+					//var goodsName=$("#goods_name_txt").val();
+					//alert("goodsName"+goodsName);
+					loadData(1,'');
+					return false;
+				});
+				return false;
+			};
+			//searchGoods
+	
+			
+		function loadData(curentPage,goodsNameParam){
+			//alert("goodsName"+goodsNameParam);
+			if($("#goods_name_txt").val()!=null){
+				goodsNameParam=oodsName=$("#goods_name_txt").val();
+			}
+			
+        	$.ajax({
+				cache : false,
+				url : "frontList.do",
+				data :{"cutPage":curentPage,
+					"goods_name":goodsNameParam,
+					"pageSize":$("#pageSize").find("option:selected").text()
+					},
+				method : "post",
+				aysnc : true,
+				dataType : "json",
+				error : function(XMLHttpRequest, textStatus, errorThrown){
+		            debugger
+		            // 状态码
+		            console.log(XMLHttpRequest.status);
+		            // 状态
+		            console.log(XMLHttpRequest.readyState);
+		            // 错误信息
+		            console.log(textStatus);
+				},
+				success : function(data) {
+					//alert(data);
+					//加载商品信息
+			    	var goodsList=data.data;
+					//alert(goodsList);
+					var str = "";
+					for (var i = 0; i < goodsList.length; i++) {
+						
+						str = str + "<div class=\"col-lg-4 col-md-6 col-12\">"+
+                        "<div class=\"single__product\">"+
+                        "<span class=\"pro_badge\">"+"Sale</span>"+
+                        "<div class=\"produc_thumb\">"+
+                            "<a href=\"#\">"+"<img src='../front/"+goodsList[i].goods_img+"' alt=\"\">"+"</a>"+
+                        "</div>"+
+                        "<div class=\"product_hover\">"+
+                            "<div class=\"product_action\">"+
+                                "<a href='#' class='addCart' title='加入购物车' name='"+goodsList[i].goods_id+"'><i class=\"zmdi zmdi-shopping-cart-plus\">"+"</i>"+"</a>"+
+                                "<a href=\"#\" title=\"喜欢\">"+"<i class=\"zmdi zmdi-favorite-outline\">"+"</i>"+"</a>"+
+                                "<a href=\"#\" title=\"比价\">"+"<i class=\"zmdi zmdi-refresh-alt\">"+"</i>"+"</a>"+
+                                "<a href=\"#\" title=\"购买\">"+"<i class=\"zmdi zmdi-money\">"+"</i>"+"</a>"+
+                            "</div>"+
+                            "<p></p>"+
+                            "<div class=\"product__desc\">"+
+                                "<h3>"+"<a href=\"product-details.html\"> <br/>"+goodsList[i].goods_name+"</a>"+"</h3>"+
+                                "<div class=\"price_amount\">"+
+                                    "<span class=\"current_price\">"+goodsList[i].goods_price+0+"</span>"+
+                                    "<span class=\"discount_price\">"+"-90% </span>"+
+                                    "<span class=\"old_price\"> "+goodsList[i].goods_price+" </span>"+
+                                "</div>"+
+                            "</div>"+
+                        "</div>"+
+                    "</div>"+
+                "</div>";
+					}
+					$("#goodsShow").html(str);
+					
+					//分页信息
+					var str2="<ul>"
+					str2=str2+"<li><a href='"+(data.currentPage-1)+"'><i class='zmdi zmdi-chevron-left'></i> 上一页</a></li>";
+					
+					 for(var i=1;i<=data.pages;i++){
+					  		if(i==data.currentPage){  
+					  			 //<li class='active'>4</li>
+					  		  str2=str2+"<li class=active><a href= "+i+">"+i+"</a></li>";
+					  		}
+					  		else{
+					  			str2=str2+"<li ><a href= "+i+">"+i+"</a></li>";
+					  		}
+					 }
+					
+					str2=str2+"<li><a href='"+(data.currentPage+1)+"'><i class='zmdi zmdi-chevron-right'></i> 下一页</a></li>";
+					str2=str2+"</ul>";
+					 $(".pagination").html(str2);
+					 
+					 pageClick();
+					//分页2
+					var str3="";
+					str3=str3+"<p>第 "+data.currentPage+" 页，共 "+data.pages+" 页，共"+data.totalCount+"条</p>";
+					$(".product-pages").html(str3);
+					
+					//每页条目
+					
+					var str4="";
+					var item=data.pageSize;
+					var temp=6
+					for(var i=0;i<6;i++){
+						if(item==temp){
+							var str4=str4+"<option value='"+temp+"' selected >"+temp+"</option>";
+						}else{
+							var str4=str4+"<option value='"+temp+"'>"+temp+"</option>";
+						}
+						temp=temp+3;
+					}
+					$("#pageSize").html(str4);
+					
+					
+					 //加载用户名
+					  var cuname=data.cuname;
+					  loadUser(cuname);
+					  //给加入购物车加单击事件
+					  add_shop_click();
+					}
+			});
+			}
+			
+		function loadUser(cuname){
+			if(cuname!=undefined){
+				$("#login_info").html(cuname+"已经登录");
+				mini_cart_show();
+			}
+			else{
+				$("#login_info").html("登录");
+			}
+		}
+	
+	function pageClick(){
+		$(".pagination li a").click(function(){
+			  //得到正在点击的a标记的hred属性值
+			  var currentPage=$(this).attr("href");
+			  var goodsName=$("#goods_name_txt").val();
+			  loadData(currentPage,goodsName);
+			  
+			return false;
+		})
+	}
+			
+			//添加到购物车按钮
+			function  add_shop_click(){
+				$(".addCart").click(function(){
+					/*判断是否登录*/
+					if($("#login_info").html()=="登录"){
+						//弹出登录模态框
+						$('#myModal').modal();
+					}
+					else{
+						//得到点击的商品id
+						var goodsId=$(this).attr("name");
+						$.ajax({
+						    cache: false,
+						    type: "POST",
+						    url:"addShop.do",
+						    data:{"goodsId":goodsId},
+						    async: true,
+						    dataType : "json",
+						    error: function(XMLHttpRequest, textStatus, errorThrown){
+						    	alert("连接错误");
+					            debugger
+					            // 状态码
+					            console.log(XMLHttpRequest.status);
+					            // 状态
+					            console.log(XMLHttpRequest.readyState);
+					            // 错误信息
+					            console.log(textStatus);
+							},
+						    success:function(data){
+						       alert("加入成功");
+						     //迷你购物车刷新
+						       show_minicart_do(data);
+						    }
+						})
+					}
+				})
+			}
+			
+			
+			//迷你购物车展示
+			function mini_cart_show(){
+				$.ajax({
+				    cache: false,
+				    type: "POST",
+				    url:"getShopping.do",
+				   // data:{"goodsId":goodsId},
+				    async: true,
+				    dataType:"json",
+				    error: function(XMLHttpRequest, textStatus, errorThrown){
+				    	alert("连接错误");
+			            debugger
+			            // 状态码
+			            console.log(XMLHttpRequest.status);
+			            // 状态
+			            console.log(XMLHttpRequest.readyState);
+			            // 错误信息
+			            console.log(textStatus);
+					},
+				    success:function(data){
+				       //alert("成功");
+				       //迷你购物车展示
+				       show_minicart_do(data)
+				    }
+				})
+			}
+			
+			//迷你购物车展示
+			function show_minicart_do(data){
+				var cart=data.shoppings;
+			       var number=0;
+			       var sum=0;
+			       var str="";
+			       for(var i=0;i<cart.length;i++){
+			       str=str+"<li class='single_product_cart'>"
+			        +"<div class='cart_img'>"
+		            +"<a href='product-details.html'>"+"<img src='../front/cart/"+cart[i].goods.goods_img+"' alt=''>"+"</a>"
+		        +"</div>"
+		        +"<div class='cart_title'>"
+		            +"<h5>"+"<a href='product-details.html'>"+cart[i].goods.goods_name+"</a>"+"</h5>"
+		            +"<h6>"+"<a href='#'> legendary </a>"+"</h6>"
+		            +"<span>$"+cart[i].goods.goods_price+" x "+cart[i].shopping_count+"个</span>"
+		        +"</div>"
+		        +"<div class='cart_delete'>"
+		            +"<a href='#'>"+"<i class='zmdi zmdi-delete'>"+"</i>"+"</a>"
+		        +"</div>"
+		    +"</li>"
+		    
+		    sum=sum+cart[i].goods.goods_price*cart[i].shopping_count;
+		    number=number+cart[i].shopping_count;
+		    }
+				str=str+"<li class='cart_space'>"
+		        +"<div class='cart_sub'>"
+	            +"<h4>合计</h4>"
+	       		+"</div>"
+	       		+"<div class='cart_price'>"
+	            +"<h4>"+sum+"</h4>"
+	        	+"</div>"
+	    		+"</li>"
+	    		+"<li class='cart_btn_wrapper'>"
+	       	 	+"<a class='cart_btn' href='#' id='cart_Page_btn' onclick='show_page_do()'>进入购物车</a>"
+	       		+"<a class='cart_btn ' href='#'>去结算</a>"
+	   			+"</li>";
+			       
+			    $(".mini_cart_box ").html(str);   
+			    $(".cart_count ").html(number); 
+			}
+			
+			//购物车详情页面展示
+			function show_page_do(){
+				/*判断是否登录*/
+				if($("#login_info").html()=="登录"){
+					//弹出登录模态框
+					$('#myModal').modal();
+				}
+				else{
+					//得到点击的商品id
+					//var goodsId=$(this).attr("name");
+					$.ajax({
+					    cache: false,
+					    type: "POST",
+					    url:"cart.html",
+					   // data:{"goodsId":goodsId},
+					    async: true,
+					    //dataType : "json",
+					    error: function(XMLHttpRequest, textStatus, errorThrown){
+					    	alert("连接错误");
+				            debugger
+				            // 状态码
+				            console.log(XMLHttpRequest.status);
+				            // 状态
+				            console.log(XMLHttpRequest.readyState);
+				            // 错误信息
+				            console.log(textStatus);
+						},
+					    success:function(data){
+					       
+					    $("#showPart").html(data);   
+					       
+					    }
+					})
+				}
+				
+				return false;
+			}
+			
+</script>
+        
+    </body>
+</html>
+

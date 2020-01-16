@@ -1,0 +1,434 @@
+﻿<body>
+	<meta charset="utf-8">
+	
+	
+	
+	<!-- Add your site or application content here -->
+	<!--
+	作者：1007409254@qq.com
+	时间：2020-01-08
+	描述：从   class="shop_area ptb-100" class="container"   开始替换
+-->
+
+
+
+				<!--Breadcrumb section-->
+                <div class="breadcrumb_section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="breadcrumb_inner">
+                                    <ul>
+                                        <li><a href="shop.html">商店</a></li>
+                                        <li><i class="zmdi zmdi-chevron-right"></i></li>
+                                        <li>我的购物车</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Breadcrumb section end-->
+	
+	
+	
+	
+	<div class="shop_area ptb-100" >
+		<div class="container">
+
+			<div class="" id="list_view" role="tabpanel">
+				<div class="row" align='left'>
+
+					<!-- 循环体 -->
+					<div id='show_cart_goods'></div>
+					
+					<div class="product_details_inner right_sidebar ptb-110"
+						align="right">
+						<div class="container">
+
+							<div class="row">
+
+								<div class="col-md-12 col-lg-10 col-12">
+								<a href="#"> <img src="upload/heros1.png" alt="big-1">
+								</a>
+								</div>
+								<!--Product Tab Style End-->
+								<div class="col-md-12 col-lg-12 col-12">
+									<div class="product-details-content">
+									
+										<div class="price_amount">
+											应付：<span class="old_price" id='should_pay'>$????</span> <br /> 
+											折扣：<span class="discount_price">-90%</span> <br /> 
+											实际付款：<span class="current_price" id='real_pay'>$?????</span>
+										</div>
+										<h3>合计金额：<span id='total_count'>?????元</span></h3>
+										<p>===================购物愉快(￣︶￣)↗ ======================</p>
+										<div class="product_variant_select">
+											<div class="select-option-part">
+												<label>
+													<h4>
+														<i class="zmdi zmdi-money-box"></i> 支付方式
+													</h4>
+												</label> <select class="nice-select">
+													<option value="">-请选择 -</option>
+													<option value="">支付宝</option>
+													<option value="">微信</option>
+													<option value="">翼支付</option>
+													<option value="">现金</option>
+												</select>
+											</div>
+											<div class="select-option-part">
+												<label>会员卡</label> <select class="nice-select">
+													<option value="">- 请选择 -</option>
+													<option value="">VIP金卡</option>
+													<option value="">VIP银卡</option>
+													<option value="">VIP铜卡</option>
+												</select>
+											</div>
+											
+											<div class="add_to_cart_btn">
+												<a href="#" id='go_count_page'>去结算</a>
+											</div>
+											<a class="cart_btn " href="#">清空购物车</a>
+											<div class="wishlist">
+                                                <a href="#"><i class="zmdi zmdi-favorite-outline"></i></a>
+                                           </div>
+										</div>
+										
+										
+										<div class="product_details_cat_list mt-35">
+											<div class="categories_label">
+												<span>分类:</span>
+											</div>
+											<ul>
+												<li><a href="#">英雄</a></li>
+												<li><a href="#">装备</a></li>
+												<li><a href="#">消耗品</a></li>
+												<li><a href="#">地图</a></li>
+												<li><a href="#">其他</a></li>
+											</ul>
+										</div>
+										<div class="product_details_tag_list mtb-10">
+											<div class="tag_label">
+												<span>标签 : </span>
+											</div>
+											<ul>
+												<li><a href="#">LOL</a></li>
+												<li><a href="#">德玛西亚</a></li>
+												<li><a href="#">打野</a></li>
+												<li><a href="#">法师</a></li>
+												<li><a href="#">刺客</a></li>
+											</ul>
+										</div>
+										<div class="product-share">
+											<div class="share_label">
+												<span>分享 :</span>
+											</div>
+											<ul>
+												<li><a href="#"> <i class="zmdi zmdi-facebook"></i>
+												</a></li>
+												<li><a href="#"> <i class="zmdi zmdi-twitter"></i>
+												</a></li>
+												<li><a href="#"> <i class="zmdi zmdi-google-plus"></i>
+												</a></li>
+												<li><a href="#"> <i class="zmdi zmdi-pinterest"></i>
+												</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="modal fade" id="countModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title" id='login-title'>确认订单</h4>
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body " align=center>
+      
+      <div id='count_mini_window'>
+           <li class="single_product_cart">
+             	<div class="cart_title">
+                  <h3><a href="product-details.html"> 空空如也，快去买东西吧</a></h3>
+              	</div>
+           </li>
+           <li class="cart_space">
+ 				<div class="cart_sub">
+                     <h4>合计</h4>
+                </div>
+                <div class="cart_price">
+                	<h4>????</h4>
+                </div>
+            </li>
+         </div>  
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+	
+	
+	
+	
+	
+</body>
+<script>
+
+$.ajax({
+    cache: false,
+    type: "POST",
+    url:"getShopping.do",
+   // data:{"goodsId":goodsId},
+    async: true,
+    dataType:"json",
+    error: function(XMLHttpRequest, textStatus, errorThrown){
+    	alert("连接错误");
+        debugger
+        // 状态码
+        console.log(XMLHttpRequest.status);
+        // 状态
+        console.log(XMLHttpRequest.readyState);
+        // 错误信息
+        console.log(textStatus);
+	},
+    success:function(data){
+       var cart=data.shoppings;
+       var sum=0;
+       var str="";
+       for(var i=0;i<cart.length;i++){
+       str=str +"<div class='col-12 mb-40'>"
+		+"<div class='row'>"
+		+"<div class='col-lg-1'><input type='checkbox' class='checkbox-form' name='"+cart[i].shopping_id+"' /></div>"
+		+"<div class='col-lg-4'>"
+			+"<div class='single_Product_list'>"
+				+"<div class='single__product'>"
+					+"<span class='pro_badge'>火爆</span>"
+					+"<div class='produc_thumb'>"
+						+"<a href='product-details.html'>"
+					+"<img src='../front/cart/"+cart[i].goods.goods_img+"' alt='' /></a>"
+					+"</div>"
+				+"</div>"
+			+"</div>"
+		+"</div>"
+		+"<div class='col-lg-7'>"
+			+"<div class='product__desc'>"
+				+"<h3>"
+					+"<a href='product-details.html'><h4>"+cart[i].goods.goods_name+"</h4></a>"
+				+"</h3>"
+				+"<div class='product_rating'>"
+					+"<a href='#'><i class='zmdi zmdi-star'></i></a><a href='#'>"
+				+"<i class='zmdi zmdi-star'></i></a><a href='#'><i class='zmdi zmdi-star'></i></a><a href='#'><i class='zmdi zmdi-star'></i></a><a href='#'><i class='zmdi zmdi-star-half'></i></a>"
+				+"</div>"
+				+"<div class='price_amount'>"
+				+"<span class='current_price'>$"+cart[i].goods.goods_price+"</span>" 
+				+"<span class='discount_price'>-90%</span><span class='old_price'>"+cart[i].goods.goods_price+"0</span> <br/> "
+				+"购买数目为：<div class='single_product_action d-flex align-items-center'>"
+				+"<div class='cart-plus-minus' align=center>"
+				+"<form><input type='text' value='"+cart[i].shopping_count+"' name='"+cart[i].shopping_id+"'  class='cart-plus-minus-box' />"
+				+"</form></div><div class='add_to_cart_btn'><a href='#'>单独购买</a></div>"
+				+"<div class='wishlist'><a href='#'><i class='zmdi zmdi-favorite-outline'></i></a>"
+				+"</div></div>"
+				+"<p>"+cart[i].goods.goods_mes+"</p>"
+			+"</div>"
+		+"</div>"
+	+"</div>"
+	+"</div>"
+	+"</div>"
+
+       sum=sum+cart[i].goods.goods_price*cart[i].shopping_count;
+}
+    $("#show_cart_goods").html(str);   
+    
+    $("#should_pay").html("$"+sum+"0");   
+    
+    $("#real_pay").html("$"+sum);  
+   
+    $("#total_count").html("$"+sum);  
+    
+  	
+    //修改数量函数
+	changecount();
+    
+	//整合显示订单按钮
+    orderpage();
+    
+    }
+})
+
+
+
+	//修改数量函数
+	function changecount(){
+	$(".cart-plus-minus-box").change(function(){
+			
+	var count=$(this).val();
+	var shoppingId=$(this).attr("name");
+	alert("shopping_id"+shoppingId+"shopping_count"+count);
+	$.ajax({
+		cache: false,
+	   type: "POST",
+	 	url:"updateCartCount.do",
+	   data:{"shopping_count":count,
+		"shopping_id":shoppingId,
+	   },
+	    async: true,
+	    //dataType:"json",
+	    error: function(XMLHttpRequest, textStatus, errorThrown){
+	    	alert("连接错误");
+	        debugger
+	        // 状态码
+	        console.log(XMLHttpRequest.status);
+	        // 状态
+	        console.log(XMLHttpRequest.readyState);
+	        // 错误信息
+	        console.log(textStatus);
+		},
+	    success:function(data){
+	    	alert("success:"+data);
+	    }
+	})
+	})
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//订单
+function orderpage(){
+	//显示结算窗口
+	 $("#go_count_page").click(function(){
+		 var shopArrays=new Array();
+			/*遍历所有的选中的复选框*/
+			$("input:checkbox:checked").each(function(){
+				shopArrays.push($(this).attr("name"));
+			});
+			//alert(shopArrays);
+			//向服务器发送数据，接收数据
+			show_goods_list(shopArrays);
+			
+			$('#countModal').modal();
+			
+			return false;
+	})
+}
+
+
+//向服务器发送checked数据，生成订单页面
+function show_goods_list(shopArrays){
+	$.ajax({
+		cache: false,
+		type: "POST",
+		url:"goCount.do",
+	  	data:{"sids":JSON.stringify(shopArrays)},
+	    async: true,
+	    dataType:"json",
+	    error: function(XMLHttpRequest, textStatus, errorThrown){
+	    	alert("show_goods_list()连接错误");
+	        debugger
+	        // 状态码
+	        console.log(XMLHttpRequest.status);
+	        // 状态
+	        console.log(XMLHttpRequest.readyState);
+	        // 错误信息
+	        console.log(textStatus);
+		},
+	    success:function(data){
+	    	var cart=data.shoppings;
+		       var number=0;
+		       var sum=0;
+		       var str="";
+		       for(var i=0;i<cart.length;i++){
+		       str=str+"<li class='single_product_cart'>"
+		        +"<div class='cart_img'>"
+	            +"<a href='product-details.html'>"+"<img src='../front/cart/"+cart[i].goods.goods_img+"' alt=''>"+"</a>"
+	        +"</div>"
+	        +"<div class='cart_title'>"
+	            +"<h5>"+"<a href='product-details.html'>"+cart[i].goods.goods_name+"</a>"+"</h5>"
+	            +"<h6>"+"<a href='#'> legendary </a>"+"</h6>"
+	            +"<span>$"+cart[i].goods.goods_price+" x "+cart[i].shopping_count+"个</span>"
+	            +"<div class='container'><input type='text' style='width: 80%' placeholder='请输入订单备注' name='orderRemark'/></div>"
+	        +"</div>"
+	        +"<div class='cart_delete'>"
+	            +"<a href='#'>"+"<i class='zmdi zmdi-delete'>"+"</i>"+"</a>"
+	        +"</div>"
+	    +"</li>"
+	    
+	    sum=sum+cart[i].goods.goods_price*cart[i].shopping_count;
+	    number=number+cart[i].shopping_count;
+	    }
+			str=str+"<li class='cart_space'>"
+	        +"<div class='cart_sub'>"
+         +"<h4>合计</h4>"
+    		+"</div>"
+    		+"<div class='cart_price'>"
+         +"<h4>"+sum+"</h4>"
+     	+"</div>"
+ 		+"</li>"  
+ 		
+ 		+"<li class='cart_btn_wrapper'>"
+ 		+"<a class='cart_btn' href='#' data-dismiss='modal'>取消</a>"
+    		+"<a class='cart_btn' href='#' id='submitOrder' data-dismiss='modal'>点击付款</a>"
+		+"</li>";
+		    $("#count_mini_window").html(str);   
+	    
+		    
+		    //提交订单按钮事件绑定
+			sub_order(shopArrays,sum);
+	    }
+	})
+}
+
+//提交订单数据
+function sub_order(shopArrays,sum){
+	var orderRemark=$(":text[name=orderRemark]").val();
+	var totalprice=sum;
+	
+	$("#submitOrder").click(function(){
+		$.ajax({
+		    cache: false,
+		    type: "POST",
+		    url:"order_sub.do",
+		   	data:{"sids":JSON.stringify(shopArrays),
+		   		"orderRemark":orderRemark,
+		   		"totalprice":totalprice},
+		    async: true,
+		    //dataType : "json",
+		    error: function(XMLHttpRequest, textStatus, errorThrown){
+		    	alert("连接错误");
+	            debugger
+	            // 状态码
+	            console.log(XMLHttpRequest.status);
+	            // 状态
+	            console.log(XMLHttpRequest.readyState);
+	            // 错误信息
+	            console.log(textStatus);
+			},
+		    success:function(data){
+		   		alert(data);
+		   		show_page_do();
+		    }
+		})
+		
+	})
+	
+}
+
+</script>
